@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Info Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Animal Info Hub</h1>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" id="loginLink">Login</a>
+      <a href="register.html" id="registerLink">Register</a>
+      <a href="#" id="logoutLink" onclick="logoutUser()" style="display:none;">Logout</a>
+    </nav>
+    
+  </header>
+  <main>
+    <h2>Welcome!!!  Animal Hub presents.</h2>
+    <p>Explore fascinating facts about different animals around the world.</p>
+    <section class="animal-list">
+        <div class="animal-card" onclick="showInfo('lion')">
+          <img src="https://th.bing.com/th/id/OIP.5QKqNSYpAXk6iqepKlfvxAHaHa?w=900&h=900&rs=1&pid=ImgDetMain" alt="Lion">
+          <h3>Lion</h3>
+          <p>Lions is the king in the jungke. </p>
+        </div>
+        <div class="animal-card" onclick="showInfo('elephant')">
+          <img src="https://th.bing.com/th/id/OIP.gwhbAdLHZhABSx95wfXgBAHaHa?rs=1&pid=ImgDetMain" alt="Elephant">
+          <h3>Elephant</h3>
+          <p>Elephant are big sized animal.</p>
+        </div>
+        <div class="animal-card" onclick="showInfo('dolphin')">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAEOAQ4DASIAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAgMEAQAFBv/EAEIQAAIBAwMBBQUFAwgLAAAAAAABAgMRIQQSMUEFE1FhcRQigZGhFTJSscFictEWQkNjgqLC0iNTZHOSk6Oy4fDx/8QAGgEAAwEBAQEAAAAAAAAAAAAAAQIDBAAFBv/EACMRAQEBAQACAgIDAQEBAAAAAAABAhEDEiExE1EEFEFhIlL/2gAMAwEAAhEDEQA/APinJnJt9RSbY2K4Poo8nnDYJsqprgRTTwV048GjMQ3TqcWV04vzFU1wVwSH4y6p1KLwehSTwSUki+kuBLU1VJSxkupbsEtLoW00vqZt00VU72KYOWOREFwUwSMuq0ZMi34jFJ+ItIYkR0vkWfE278WYcIpGSuA2/FhvgBj5T0Bt+IDbs8hMF8FIjSm2urFu+cscxMsMeEpFS+cskq38y2aJKqLZRrz6t85IquevU9CqlkhqRWbGrKfXn1VzkhqLLyejVRHUja5Xh8159RZJZrnJdUjySTSEs605qSaYiSbKZpiZJmfcac1LNCGrsqkhDWTNrLRmqYofBPAuCz8SiFjbnLNqm00V0+giCWCiHQ0SM2qpp+RXTRLStdFtMNjPqqaUWXUo2JaRXTuR0Xq2klgtpkVLoW0zNs8VQ5KYktNlMWZtL5p3gGmKixiZKryiRxiZovD9Y2Aa3yA2PInaFgsJvkBjo2sYqfIbbFSGkJaXJ4JavDKJMmqPktmJ6R1OpLOPJVU6klR2NWUkdWJFVL6jurkNTlloOUVXJFNFtRcks1ydY0ZqWQiRRNCJEdTrTmp5LIrZkoaOUbmXTTl0CiCZPAppmrKGz49CmmIj0KKcTRGXSqnEspolp9C2nwdWbVVU1wWUsElNPBZDoR0Xqum8Iqg+COBTB+Jn1D5qyA+MiWEh0Xkz6i2dKYyDTEphkuKzRqZtxSZrkDh/YUmLcupkpCpS/MaRLWjNwLeBe5nXH9UutchMpcnOWRcmPIFoJS+hNUkMk+Seb5LZidpE5cktVlE3ySVG8mjMJ1NUfKJJvkrmupHUSyWkNlLU6ksyqoS1A8Xymn1J5clEyeZLUac0DMU0ugMhTbRl3OtOadBFNNcE8Smn0NGIjtTC+CmHQngUwXBokZNVVTK6bJIFMOgaz6W0mWQ6EFNldOaxcjqEWQvh9CmM4tW6p8k0Zw2pJ8hx4M9ik+FkJD1IihIcpcEbk00sjINSJFMZGZO5N7KVLBjkK3mOaF9TewnIByAlPgXv8ykid0fuRjkK3GOaDMlumyfUXJ8mTngTKY8yW6ZKWWIm+TZPqInPPwL5yToaklklm+RkpXuhEpclpOARNk1TqOmyebKQ+U1Qll5lc8k00GtGUtQnmUTETRLUackSQq2R0mKM+o0Q2P6lFNk0WUQL4T0rgymmySFymDLRk2sgyqHBHBrBTCWAs+lcGPjIlgx0WxLOprISKIzRDCVrFEZIjrLurIvjIzfkmjOyGqXBKwZVCmw4zJ9yNUsCepuqXPgyU/MnczJS4B6u9jJVPMX3ls3FSk7sW5seYJaq7zg5zuS72bvG9S9Oc+gqUrAOeUDOWBpl3XSndk9SRzmvETORWZcGchMpeYUmIk+pSQYGTQiYcpCJyDxWFyYidsjZMnkzlcwifLET6lE8iJiWNOU0kKbHT6iXyZ9T5aM/RkSiBPEfErlPSmDZRB8EsOhRAvGbauD4KISJIFEWMz1XGXA+MiSLtYdGXGRbE6qUhsZO6I1JjoSfIlhVqnxkap8EUZc5Gxljkncu6rU8nhvt7V6evU0+s01K9OcoSdFyg/Jrc2muqPTU3c+c7flB62OyznChTjVt0mnJpPzSsD159jn5vH09DWafUw7yhNSimoyTxKD8JRGueT4PT6nU6acatCU4z4e3qvBrho+l0OvratbalBwml95NKEvK0ne4vB1nj0nMCU0bLT6x2fcTs+t4JfVgPTavnuv+pR/zDS5/ZBqd0buAVDUpZjBetWiv8R3dVv6v/nUv8x3c/sPl0pJmSd0c6OptdU3L/duM/wDsbEuUo3jNOMubTTi/kx5y/RQSbuBK3xMqS5FuWCnBZN8iZN9TZTWRE555DxSRs2iebCcriZSyFXMC3yJmHJ3FSyCrQuQmQ2TsKmxKrCJ9RD5HTEtGbX205HEdHoJjcfAvkmlFPoUxSsTw6D49C0ZtHwHRfAmLGRY/EapjIbFkqfgNjJg4lVSaYyLsiWMrclMIVZq6i1H8Uvdj44chb8J0xSGKooq7aUerfBNOtpKK9+tCU/wx4XqRVu0dP+9LhXfur0SI63P8Cdv0sra6d3Chu8N6Vpf2bkEtOpNycVuk225ycpNvLbuSz7QWduH5EtTtCavtefMldq58W69TuKcMzksdFZBrW6eh915R87PU1qnMnnzBU/xMn7rfgt+6+gfa1STxJnS7SqfiZ4PfbVjqBKrJ9Wd7x39ePe+1JdZsF9pJ8yl8zwN78QXNne5v6+X0H2jFWanK/qW0u368YqM6neQWNtZKpG3pJM+S3s7fLxO93X+PH1su1dNPMqEEv6mUov5NtfQ2nqNFWVqdbbP8Fay+CmsfNI+SVWaTu38DlWqJ3uyk8lhP6/6r6qq5RbjJNNdGIlLzPN0mvk9tGs5OLxCWW4N8fDxLG2m08PwfJsxqanSetzeVrla4uTMlLIG4NUkE2LkbcGTuJTwqYpjZCmIrCZrkXtuOZyimR1PlfN4Uh0AFEdBFcwmqdAfAXBDYotGemx4yEhZqbHTpqYUq9Kir1JqK6Llv0RPUrRo05VJZteMV+KXh/E8WpWq1ZSlKTbk73bJeXyenxPt2fH7vcn2zCkn7PTju/HUSnL4J4XyIq3autrNudWbfmzzbr1Zjcn1MGt6tWnhzFL1Em7uTv6gOrJ9RVnc1Jg+afkg3N25AuuoWyXgZsZ3rXe0jN3RHJsNQNUAetd7wvk6zG7Ga6bSvbLwvUPoX8kTszI9Uer65M2rhK7bsrK7b8kCZp/aQCTdlkYoNrKPU0ujioKVaGzHuw3bpLznJLnyX/wAqhChTb204J+Nlf5mrHgtjNry3vw8BR8MsJaevL7tOb/stfme3J5dkjnexSfx/3Q/JXi+y6yOY05p+TV/zKtNPWKW2sqjgk/v2919LN5LW7MXO+GPPDM/VH2uvtkpcC2zrgsejI651zDhKpAu4uQxi2LTwODkzH0MEpxpIbFIFWbGxRWJ6p0FwPhGi7bpzh4vut6/uSv8AQREamMhr5WU4dmK7nqo1Ofdt3S/vtSD7/sOEZbqe9pe7Zwkk1xdRab88kN7859Q1bpj0wD0t/wBQvjt+7Xk9oap6msnvcoRjtpxVONKnTj+GEI4sRWl8D6Cem0s3ulRg5eNrfOxnsmjf9DHH738SV/j9/wBaM+T1nI8GMXy+B1PTV6lnThKV/BY+fB7UaNCP3acI28Ev1HIM/jz/AGhry15lLszUytvlTgnzf3pL4LH1KvsmKd41E/KUbZ9UXRHReCs8WYhrdry/syf+sh8EzPsyWX3kfkz1bqxj4O/Hknz+3lrs6C5qL4Rf6sb7Dp1a7k/kimRjOnjzDErS6WPEL/vNskqU6lWclCiowg3GF0ox/eb5bZeCzvSUZ8IvY00u9m3+zTwvi3kZSoUKUt0IJS/E7uS9Gx74A4fI0xJ/h+j3MFyMuC3ccJB3TMxwCmY5ZONxslyKYxu4uXqA0LaOSNyzmmhacMlyLeBgDEpoEFoLgFi08LYITMsJVIdHkdFiExsWViWjkGnwLTDQ8iRiGRFoYsIaErWzgepqCAkmGkzkEjiVqwHuwAc2wFsHuObwAmEcHGMFjGgWjhLdwchMywDgaAGtC7BghAfUY0A0EYFXOYVjLIAsyA+WMeRcuThgbtGN3NYItPHYAZpjEMEH4BGC08La8TLWYYPUWwwlyMiKiNiUhabFjE+BSGRHiVNiHfAuPTz4XUJyXFxomJMJC7hxu02k2o23NcK/iEDEwkxaZtzimXMbF7jtwHcGmMTROmxillHO4a3wY2edHXzjUlT1EIx2tpyhe6a8m2XKUZRUotOLV01w15E87mvp3pZ9sudcy5jYw8EZZA3Z1zhZIE2UgG0M5rVwcGmPBwtVrCpqzCUgZ+JzoWzGdc4FOxow1swSmgWsAByFgPGPkzJrBzcWmg0MTFJhpjhTE2MTFJhxKRPhqeLcodS1Opou9OcX+zWgqi+En7y+ZO34GpnXM19p8ehDtSMFJ1+z9PKOZS2Lcr9ZJO2fgxX8o9LaVGrpacqMozhGdBKEluTXvU37vyaJV5nj6qk6FWy+5P3oPy8PgY/Pi4ntk2PFjV5Xrx1ukaX+lS4vuUl+hSpKSTjJNPqndHzN304KaGrqUXeLa9eH6oGf5X/1FdeD9PeRzE0NbpayjvTpysruFnF+e1/xKdtOSuqqt+67/L/yaZ5s1mvx9lo2+fic3ShuxKVvF7V9Lv6k7qOba2JxeLRul9Mg15cz6CfKHWSUtRWlHj3Y3XVxik2dp9XVoe5bdTbu4vo/GLKpUItq0IpPxz+YUaEVa+1GO2+3tF/bPOU+lU79N041JNZcVCTkv+FDlp9bLMdLq5Ly09b/ACmUtbHR2cJrerWs8IKp27rKre6vN+s2/wBSv5r9Ic1/kFHs/taTxodT6zhsXzqNB/ZfauL6dRX7dfTL/GSvtSs7Xn9QJdqS/E38Tvy6/wCO5v8ASt9ma9vMtHC349VTv/cTNXZWqlhans7d4PUTX17qx5cu05K/FxH2pV3X3MF89/Zp4/JXty7I7VgrqlRqr/Z9TQqNryi5KX0IqkK1KWyrTqU5/hqxlCXqlJEb7RrTs25Y6plNDtebj3Vd97Rf9HV9+Hqk8p+asNnzX/Xem59wLdmZKWA60aVlVoy3UZuyu7ypy52T/R9fgJbNMpp8/MDc65jsZcHVJG3BucYwDI1tNC2ECwGjLmHPBiFNI6/5jExKeRiYYNMT8xidhKYxPBSJ2Gbjkxd2EmMThlwNRRVelt/nr3oPz8PiamwkztSanKHzL2PDlGUW08NOzT6NGHr19LCstyajUtz0l+8eZUo1KcnGaaa+vozy/L4dYv8Axqx5JZ8sjUlDhj4aqqv5zJbNGq5H5hrJXoLWTaSbwb7Y+Iu3i/E867Mu/EPvSfjy9CWuccJu4qerrS4dvQkudcW6ppjMO7ycuWEqqisE92c7nS11hzrTk8tmOoxRgeu5BObBuzhlOlOeUvdXL6HSWjbMztdFyatd28jVdPFyuGmSS6/QZ3EfJfmaM+LVZ/yy34hWnr925RqSn3U1aaik2+qav1X/ALyWSjHaqlOaqU27blGUXF82kn1+LEOjT+R13FOMW9srbld2dso1Yzc/FJy29gmzLmXBbsOpIO51wFI1s4eNujG0Dc64B45g3yb5mNZFp4FPIdxS6hoaOMiw0xSCTGJYZdmpi02EuB4Ww1Gp3ATNi0MThqbOnGFSLjOKkvP9GDe5tzrO/BEtTQxeacreUs/VE9TS1aeWk4+MXdL1PSude/oR1/Hxo03Y8d034AOEvA9eVGlLO2z/AGcCnpoPq/kmZtfxb/h55a81QZux24L/AGZfiXyN9mXl9RP6+v0P5b+kCgwtjfQv7mCXQ7ZBX/gH+vYH5dfpBssm3wdGk3mWPyKLRm1aLsnez5fmw1FXTfHRLK+IJ4e0ZupHCK2ualtldxST3TtjF+nmVU513GMIKNOKtwrtLzbx9A3CDlucU5YV3cJNLgrnwcv2Gv8A39jV7LLdvF3ZrYFzm3Y0lmY5gNnNgsWqSNBZxgDcddm3wA3k1HWjxtzQHydcXo8HjBj8mDc67B0QJh3FJhoMGwdwkxdzbjl4YmGn5ikwkPKSwy/AVwEzUxyWGJ8m3Qu7NuEvBmpgXCCWifAJoLOBpzZhz4ALAXZ8msBsTh47GbA3ObBFNwTZlzL2Mvk4xl2bfAu5t7o4OObBOfJgpo04z1NcZxvuhONrX3RkrXyufEAhaSMujXwALRgr3MuYmY+RTNuargyTVrprcrq6auuLq5iZO03AoNC0FkpK6wZqYCbNuykKYmHcUmFcaFsMTYSkKT4CuP0nDEzRaYVxi8Gg0xSCQSahjByZcy4S8Ec3gG7MuAeNuwGa2CwHjH1MOMuJTMZh1zhTNTNuCcc5zeTrmM5gEdNrvKV1dd5C6u1f3l4ZLalq1aundRl2lp6LSqVHFxlKpFtqTefy6WII73KCgm5uUVBRV25NqySLfZe01ONnSc6mqUlsq0pL2inGdX3msJrJPXDQifcThqnSpbO4cNjlUlJzjKbh798X4eEhstPooVZad1KN4ydOU9+qdfellqChs87W469QfYtfGFZpUXCpT7x7a1GXexp+++7s7vb1sc12lGh3jlBRdKCbi6T1EaM2ox3tLvFF3S5J29+qaT/gYU9HR0lLU6ilVrS1FSrTgqdR0401Cyw0neT5RTW02hoz7RbozcNPR0MqUHUnF7q0bPe+ecv0sKpx7T0cZ0qMpqtLVQ0/d0pUqkFOVNz4d2prq+iAqx7Uq1HSdSjVlq4QdSUKtCUHDTcOpUjhKPX9SVvb9njdfOlLT9kKNO0vY1JSc3K0N0lss/O7v52PPuP1UdVT9khXlBpULUO7lCUe6U5Ws4Y5uTnT6GsTNu7A5Ta8Hb62OTLSlGmwgAkUlLRI1MxdTRytTd0GmAcjvoDLmp+Yq7/I3I3sXhqYdxKbuGmx5S2GXMuCm+DlcYvBmNg5OA7jm2C2ccdR44FtHPqC7iU0c2Dc7Jwp23ZtwL5NRwNbyDdnPlmXYK6Dp1Z0qlOpDE6c41It5W6LusFke0YQt3eko00q1SvJRnU96c6UqTvub8br0PPydknqd+TxTDVumtKlTi/Z6Gp06vJ+8q++8nbwvgZU7SrVKCoyjnbTpymqlVboQtju09l3bOCF3BEuYZa+0aveVakacFKprZaxpuTj71N0nTa8Gm7i46qjTqKVLS0YU3SqUatPdUl3sKn3lKUnf0twSXOuJcw0UV9Qq/s8Y0YUoUKTpQhTcpK2+U7tzzfIlg3CjFzdk1xfIn18Gf/Z" alt="Dolphin">
+          <h3>Dolphin</h3>
+          <p>Dolphines have the higer iq among all the mammals in the sea.</p>
+        </div>
+        <div class="animal-card" onclick="showInfo('tiger')">
+          <img src="https://news.cgtn.com/news/3d3d774d32416a4d35457a6333566d54/img/2f568bd3c848432e92a76bdbe1fb6952/2f568bd3c848432e92a76bdbe1fb6952.jpg" alt="Tiger">
+          <h3>Tiger</h3>
+          <p> Tiger are the big cat variety in cat family.</p>
+        </div>
+        <div class="animal-card" onclick="showInfo('giraffe')">
+          <img src="https://th.bing.com/th/id/OIP.er_HIma9Q9VRQH8q8-OHxgHaHa?w=168&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Giraffe">
+          <h3>Giraffe</h3>
+          <p> Giraffe have the longest height among all animals.</p>
+        </div>
+      </section>
+      
+      <!-- Info Box -->
+      <div id="animal-info-box" class="hidden">
+        <div id="info-content">
+          <span id="close-btn" onclick="hideInfo()">X</span>
+          <h2 id="animal-title"></h2>
+          <p id="animal-description"></p>
+        </div>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Animal Info Hub</p>
+  </footer>
+</body>
+</html>

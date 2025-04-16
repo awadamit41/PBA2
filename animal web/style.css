@@ -1,0 +1,79 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+  }
+  
+  header {
+    background: #28874e;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+ 
+  nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .animal-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .animal-card {
+    background: white;
+    padding: 1rem;
+    border: 3px solid #161515;
+    border-radius:15px;
+    width: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+
+      }
+  .animal-card img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
